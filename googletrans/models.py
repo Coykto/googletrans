@@ -1,5 +1,5 @@
 from httpx import Response
-from typing import List
+from typing import List, Optional
 
 
 class Base:
@@ -39,7 +39,7 @@ class Translated(Base):
         origin,
         text,
         pronunciation,
-        parts: List[TranslatedPart] | None,
+        parts: Optional[List[TranslatedPart]],
         extra_data=None,
         **kwargs
     ):
